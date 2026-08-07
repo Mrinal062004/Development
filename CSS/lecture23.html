@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animation ka gyaan</title>
+    
+
+    <style>
+        *{
+            margin:0px;
+            padding:0px;
+            box-sizing:border-box;
+        }
+        .container{
+            border:1px solid black;
+            width:100vw;
+            height:100vh;
+            background-color:beige;
+
+        
+    }
+    .box{
+        border:1px solid black;
+        width:350px;
+        height:80px;
+        background-color:blue;
+        border-radius:10px;
+        /* margin:10px; */
+        /* padding:10px; */
+        position:relative;
+        /* animation-name:rightMovement;
+        animation-duration:5s;
+        animation-iteration-count:1;
+        animation-delay:2s;
+        animation-timing-function: linear;
+        /* animation-direction:alternate-reverse; */
+        /* animation-fill-mode:forwards; */ 
+        animation:5s linear 1s 2 alternate none running rightMovement;
+    }
+    @keyframes rightMovement{
+        from {
+            top:0;
+            left:0;
+    }
+        to{
+            top :0;
+            left:940px;
+
+        }
+    }
+    #Box{
+        border:1px solid black;
+        width:350px;
+        height:80px;
+        background-color:blue;
+        border-radius:10px;
+         /* margin:10px; */
+        /* padding:10px; */
+        position:relative;
+        /* animation-name:rightMovement;
+        animation-duration:5s;
+        animation-iteration-count:1;
+        animation-delay:2s;
+        animation-timing-function: linear;
+        /* animation-direction:alternate-reverse; */
+        /* animation-fill-mode:forwards; */ 
+        animation:5s ease-in 1s infinite alternate none running leftMovement;
+        
+    }
+     @keyframes leftMovement{
+        from {
+            top:420px;
+            left:940px;
+    }
+        to{
+            top :420px;
+            left:0;
+
+        }
+    }
+    .circles{
+         
+   height:100px;
+        background-color:green;
+        width:100px;
+        border-radius:50%;
+        /* object-fit:cover; */
+       left:50%;
+       right:50%;
+
+
+        
+       
+       
+    
+     animation:10s ease-in 1s infinite alternate none running circleMovement;
+        
+    }
+     @keyframes circleMovement{
+        0% {
+            top:1%;
+            left:5%;
+    }
+        30%{
+            top :5%;
+            left:90%;
+
+        }
+        60%{top:90%;
+            left:10%;
+
+        }
+        100%{
+            top:95%;
+            left:90%;
+
+
+        }
+    }
+   
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box"><img src="salman.jpg" alt="salman" width="350px" height="80px"></div>
+        <div id="Box"><img src="salman.jpg" alt="salman" width="350px" height="80px"></div>
+        <div class="circles"></div>
+    </div>
+</body>
+</html>
