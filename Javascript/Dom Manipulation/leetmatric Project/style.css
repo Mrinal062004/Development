@@ -61,11 +61,13 @@ h1{
     display: flex;
     justify-content: center;
     align-items: center;
-    background:conic-gradient(#299f5d var(--progress-degree,0%), #283a2e 0%);
+    background:conic-gradient(#299f5d var(--progress-degree,0%), #101010 0%);
     font-size:16;
     font-weight: 700;
     columns:white;
     position:relative;
+    flex-direction:column;
+    gap:20px;
 
 
  }
@@ -83,6 +85,7 @@ h1{
     flex-wrap: wrap;
     gap: 10px;
     justify-content: space-evenly;
+    
 }
 
 h4{
@@ -90,13 +93,17 @@ h4{
 }
 
 .card{
-    background-color: rgb(230, 146, 44);
+    background-color: rgb(183, 110, 150);
     width: 40%;
     max-width: 290px;
     padding: 10px;
     border-radius: 10px;
     font-size: 1rem;
     min-height: 4rem;
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
 }
 .circle span{
     position: relative;
