@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded", function() {
             myHeaders.append("content-type", "application/json");
 
             const graphql = JSON.stringify({
-                query: "\n    query userSessionProgress($username: String!) {\n  allQuestionsCount {\n    difficulty\n    count\n  }\n  matchedUser(username: $username) \n{\n profile{ranking}\n    submitStats {\n       acSubmissionNum {\n        difficulty\n        count\n        submissions\n      }\n      totalSubmissionNum {\n        difficulty\n        count\n        submissions\n      }\n    }\n  }\n}\n    ",
+                query: "\n    query userSessionProgress($username: String!) {\n  allQuestionsCount {\n    difficulty\n    count\n  }\n  matchedUser(username: $username) \n{\n profile{ranking\n userPhoto}\n    submitStats {\n       acSubmissionNum {\n        difficulty\n        count\n        submissions\n      }\n      totalSubmissionNum {\n        difficulty\n        count\n        submissions\n      }\n    }\n  }\n}\n    ",
                 variables: { "username": `${username}` }
             })
             const requestOptions = {
@@ -91,11 +91,15 @@ document.addEventListener("DOMContentLoaded", function() {
         updateProgress(solvedTotalHardQues, totalHardQues, hardLabel, hardProgressCircle);
 
         const cardsData = [
-            {label: "Overall Submissions", value:parsedData.data.matchedUser.submitStats.totalSubmissionNum[0].count },
-            {label: "Overall Easy Submissions", value:parsedData.data.matchedUser.submitStats.totalSubmissionNum[1].count },
-            {label: "Overall Medium Submissions", value:parsedData.data.matchedUser.submitStats.totalSubmissionNum[2].count },
-            {label: "Overall Hard Submissions", value:parsedData.data.matchedUser.submitStats.totalSubmissionNum[3].count },
+            {label: "Overall Submissions", value:parsedData.data.matchedUser.submitStats.totalSubmissionNum[0].submissions },
+            {label: "Overall Easy Submissions", value:parsedData.data.matchedUser.submitStats.totalSubmissionNum[1].submissions },
+            {label: "Overall Medium Submissions", value:parsedData.data.matchedUser.submitStats.totalSubmissionNum[2].submissions },
+            {label: "Overall Hard Submissions", value:parsedData.data.matchedUser.submitStats.totalSubmissionNum[3].submissions },
             {label:"Ranking", value:parsedData.data.matchedUser.profile.ranking},
+            {
+        label: "Profile",
+        value: `<img src="${userhoto}" class="profile-photo">`
+    },
         ];
 
         console.log("card ka data: " , cardsData);
