@@ -1,0 +1,10 @@
+.container{
+  display:flex;
+  flex-direction:row;
+  gap:10px;
+  background-image: linear-gradient(45deg,aqua, #163675);
+  flex-wrap:wrap;
+  
+
+
+}

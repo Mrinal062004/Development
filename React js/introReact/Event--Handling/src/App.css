@@ -1,0 +1,13 @@
+
+.mydiv{
+  display:flex;
+  flex-direction:column;
+  gap:20px;
+  justify-content: center;
+  align-items: center;
+
+
+}
+button{
+  background-color: rgba(162, 0, 255, 0.167);
+}

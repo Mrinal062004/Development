@@ -1,0 +1,25 @@
+.usercard{
+    display: flex;
+    flex-direction:column;
+    border-radius:10px;
+    background-image: linear-gradient(#ffee003a, #e52e71);
+    
+    border:2px solid black;
+    padding:15px;
+    margin:15px;
+    justify-content: center;
+    align-items: center;
+    gap:10px;
+    width: 300px;
+    height: 300px;
+   
+    
+
+}
+
+#user-img{
+    border-radius:50%;
+    height:150px;
+    width:150px;
+    
+}
