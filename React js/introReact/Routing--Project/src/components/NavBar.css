@@ -1,0 +1,14 @@
+ul{
+    display: flex;
+    background-color: Beige;
+    list-style:none;
+    justify-content: end;
+    padding-right:10px;
+    gap:10px;
+}
+.active-link{
+    border:2px solid red;
+    background-color: black;
+
+
+}
